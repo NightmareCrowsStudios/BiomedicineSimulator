@@ -5,6 +5,7 @@ using UnityEngine;
 public class Raio : MonoBehaviour
 {
     float distance = 2f;
+    public Animator anim;
     //public Animator animMove;
     //public GameObject chave; 
     //public static bool looking;
@@ -64,6 +65,7 @@ public class Raio : MonoBehaviour
             {
                 //animMove.Play("pegarItens");
                 Destroy(hit.collider.gameObject);
+                anim.Play("animPegarItem");
                 //pegouItem = true;
                 //key = true;
                 //chave.SetActive(true);
